@@ -9,9 +9,9 @@ body{
 }
 
 #sub-title{
-  width: 600px;
-  margin:0 auto;
   font-size:30;
+  width:600px;
+  margin:0 auto;
 }
 
 #date{
@@ -34,8 +34,6 @@ body{
   margin-left:250px;
   margin-right:250px;
 }
-  
-  
   
   
   
