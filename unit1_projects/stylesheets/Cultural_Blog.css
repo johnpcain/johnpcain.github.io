@@ -4,11 +4,12 @@ body{
 }
 
 #header{
-  margin-left:600px;
+  width:50px;
+  margin: 0 auto;
 }
 
 #sub-title{
-  width:50%;
+  width: 600px;
   margin:0 auto;
   font-size:30;
 }
@@ -33,6 +34,8 @@ body{
   margin-left:250px;
   margin-right:250px;
 }
+  
+  
   
   
   
