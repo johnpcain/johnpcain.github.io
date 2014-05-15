@@ -1,0 +1,109 @@
+body{
+	background-color:gray;
+	font-family:sans-serif;
+}
+#header{
+  font:22;
+  color:black;
+  margin-left:350px;
+}
+
+#text{
+  width:600px;
+  margin-left:150px;
+  color:black
+}
+
+
+#sidebar{
+  float:left;
+	width:250px;
+}
+
+#footer{
+	position:absolute;
+  left:800px;
+  bottom:10;
+	width:74px;
+}
+
+a:link {color:#FF0000}
+a:visited {color:#00FF00}
+a:hover {color:#FF00FF}
+a:active {color:#0000FF}
+
+.tap-list{
+	color:yellow;
+	font-size:16;
+}
+
+#blockquote{
+  font: 14;
+  float:left;
+  background:white;
+  width:150px;
+}
+  
+#image{
+	position:relative;
+}
+#caption{
+	position:absolute;
+	bottom: -40px;
+	left: -20px;
+	z-index:2;
+body{
+	background-color:gray;
+	font-family:sans-serif;
+}
+#header{
+  font:22;
+  color:black;
+  margin-left:350px;
+}
+
+#text{
+  width:600px;
+  margin-left:150px;
+  color:black
+}
+
+
+#sidebar{
+  float:left;
+	width:250px;
+}
+
+#footer{
+	position:absolute;
+  left:800px;
+  bottom:10;
+	width:74px;
+}
+
+a:link {color:#FF0000}
+a:visited {color:#00FF00}
+a:hover {color:#FF00FF}
+a:active {color:#0000FF}
+
+.tap-list{
+	color:yellow;
+	font-size:16;
+}
+
+#blockquote{
+  font: 14;
+  float:left;
+  background:white;
+  width:150px;
+}
+  
+#image{
+	position:relative;
+}
+#caption{
+	position:absolute;
+	bottom: -40px;
+	left: -20px;
+	z-index:2;
+}
