@@ -1,0 +1,36 @@
+header{
+  font-size:36;
+  margin-left:350px;
+}
+
+body{
+  font:sans-serif;
+  background-color:white;
+}
+
+#opening-bio{
+  background-color:#B0B0B0 ;
+  width:700px;
+  padding:10px;
+}
+
+#text{
+  background-color:#E0E0E0;
+  width:700px;
+  padding:10px;
+  height:auto;
+}
+
+#links-of-interest{
+  position:absolute;
+  left:750px;
+  top: 100px;
+}
+
+.stuff{
+  font-size:12;
+}
+
+
+  
+  
