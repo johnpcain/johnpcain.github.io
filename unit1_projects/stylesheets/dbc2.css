@@ -1,6 +1,6 @@
 body{
-	background-color:gray;
-	font-family:sans-serif;
+  background-color:gray;
+  font-family:sans-serif;
 }
 #header{
   font:22;
@@ -10,21 +10,23 @@ body{
 
 #text{
   width:600px;
-  margin-left:150px;
+  margin-left:200px;
   color:black
 }
 
 
 #sidebar{
-  float:left;
-	width:250px;
-}
+  position:absolute;
+  bottom:300px;
+  width:175px;
+  font-size:12px;
+  }
 
 #footer{
-	position:absolute;
+  position:absolute;
   left:800px;
   bottom:10;
-	width:74px;
+  width:74px;
 }
 
 a:link {color:#FF0000}
@@ -33,28 +35,32 @@ a:hover {color:#FF00FF}
 a:active {color:#0000FF}
 
 .tap-list{
-	color:yellow;
-	font-size:16;
+  color:white;
+  font-size:16;
 }
+
 
 #blockquote{
   font: 14;
   float:left;
   background:white;
   width:150px;
+  padding:10px;
+  border-style:solid;
 }
   
 #image{
-	position:relative;
+  position:absolute;
+  left:300px;
+  border-style:solid;
+  border-color:black;
+  margin:10px
 }
-#caption{
-	position:absolute;
-	bottom: -40px;
-	left: -20px;
-	z-index:2;
+
+
 body{
-	background-color:gray;
-	font-family:sans-serif;
+  background-color:gray;
+  font-family:sans-serif;
 }
 #header{
   font:22;
@@ -69,16 +75,12 @@ body{
 }
 
 
-#sidebar{
-  float:left;
-	width:250px;
-}
 
 #footer{
-	position:absolute;
+  position:relative;
   left:800px;
-  bottom:10;
-	width:74px;
+  bottom:-50px;
+  width:75px;
 }
 
 a:link {color:#FF0000}
@@ -86,24 +88,12 @@ a:visited {color:#00FF00}
 a:hover {color:#FF00FF}
 a:active {color:#0000FF}
 
-.tap-list{
-	color:yellow;
-	font-size:16;
-}
 
-#blockquote{
-  font: 14;
-  float:left;
-  background:white;
-  width:150px;
-}
-  
-#image{
-	position:relative;
-}
 #caption{
-	position:absolute;
-	bottom: -40px;
-	left: -20px;
-	z-index:2;
+  position:absolute;
+  bottom:-220px;
+  color:white;
+  left: 320px;
+  z-index:2;
+  width:75px;
 }
