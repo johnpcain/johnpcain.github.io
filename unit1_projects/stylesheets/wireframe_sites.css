@@ -1,0 +1,38 @@
+body{
+  background-color:white;
+  font-family:trebuchet MS;
+}
+
+p{
+  font-size:12px;
+}
+
+ol{
+  font-size:12px;
+}
+
+#header{
+  font-size:16;
+  margin-left:auto;
+  margin-right:auto;
+  width:50%;
+}
+
+.line-separator{
+  height:1px;
+  color:black;
+  border-bottom:1px solid;
+}
+
+#content{
+  margin-left:auto;
+  margin-right:auto;
+  width:50%;
+}
+
+.image{
+  border:2px solid;
+  color:black;
+  border-radius: 25px;
+}
+  
