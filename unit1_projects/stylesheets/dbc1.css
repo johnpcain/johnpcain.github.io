@@ -1,0 +1,22 @@
+body{
+  background-color:gray;
+  color: black;
+	font-family:trebuchet MS;
+	font-size: 12px
+}
+
+.about {
+	color:black;
+	font-family:aerial;
+	font-size: 18;
+}
+
+.bullets{
+	color:white
+	font-size: 10;
+}
+
+#important{
+	font-color: red
+	font-size: 15;
+}
