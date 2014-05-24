@@ -1,0 +1,53 @@
+body{
+    margin-left:auto;
+    margin-right:auto;
+    width:50%;
+    background-color: gray;
+    border:2px solid;
+    border-radius: 25px;
+    padding:15px;
+}
+
+header{
+    font-size:30px;
+    width:450px;
+    margin:0 auto;
+}
+
+#names{
+    font-size: 22px;
+    width:300px;
+    margin:0 auto;
+}
+
+#driver-image{
+    display:inline-block;
+    border-color: black;
+    margin:10px;
+}
+
+#body{
+    position:relative;
+    left:400px;
+    bottom:240px;
+    width:250px;
+}
+
+#navigator-image{
+    display:inline-block;
+    border:solid;
+    border-color: black;
+    margin:10px;
+}
+
+#body2{
+    position:relative;
+    left:300px;
+    bottom:220px;
+    width:250px;
+}
+
+
+#Summary{
+
+}
