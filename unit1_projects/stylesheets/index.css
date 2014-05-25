@@ -1,0 +1,91 @@
+
+.recent-posts{
+	display:inline-block;
+	vertical-align: top;
+	width:350px;
+	height:100%;
+	border:1px solid;
+	box-shadow: 2px 2px 2px #888888;
+	font-size: 14px;
+	background-color: #FFFFFF;
+}
+
+.recent{
+	font-size: 18px;
+	color:black;
+	padding:5px;
+}
+
+body{
+	margin-right: auto;
+	margin-left: auto;
+	width:90%;
+	background-color: #D8D8D8;
+	font-family: 'Playfair Display', serif;
+	}
+
+p{
+	font-size:14px;
+}
+
+.big-text{
+	font-size:16px;
+	color:black;
+}
+
+.profile{
+	display:inline-block;
+	border:1px solid;
+	box-shadow: 2px 2px 2px #888888;
+}
+
+a{
+	line-height: 25px;
+	font-size: 15px;
+}
+
+.about-john{
+	display:inline-block;
+	position:absolute;
+	left: 423px;
+	top: 325px;
+	width:284px;
+	border: 1px solid;
+	padding:8px;
+	background-color: #FFFFFF;
+	box-shadow: 2px 2px 2px #888888;
+}
+
+.favorite-websites{
+	position:absolute;
+	top:420px;
+	left: 733px;
+	border: 1px solid;
+	box-shadow: 2px 2px 2px #888888;
+	width:334px;
+	height:195px;
+	padding:8px;
+	background-color: #FFFFFF;
+}
+
+.screenshot{
+	display:inline-block;
+	position:relative;
+	top:-70px;
+	left:25px;
+	width:300px;
+	border:1px solid;
+	box-shadow: 2px 2px 2px #888888;
+}
+
+.preview{
+	display:block;
+	width:290px;
+	background-color: #FFFFFF;
+	position:absolute;
+	right:228px;
+	top:240px;
+	padding:5px;
+	border:1px;
+	box-shadow: 2px 2px 2px #888888;
+}
