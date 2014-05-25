@@ -1,0 +1,38 @@
+body{
+  font:sans-serif;
+  background-color:white;
+}
+
+.header{
+  width:50px;
+  margin:0 auto;
+}
+
+.sub-title{
+  font-size:22px;
+  display:inline;
+  margin-right: auto;
+  margin-left: auto;
+  width:50%;
+}
+
+.post{
+  width:50%;
+  margin-left: auto;
+  margin-right: auto;
+
+}
+
+.date{
+  font-size:12px;
+  color:gray;
+}
+
+.image{
+  border:2px solid;
+  border-radius: 25px;
+  box-shadow: 10px 10px 5px #888888;
+}
+
+
+  

@@ -1,0 +1,51 @@
+<!doctype html>
+<html>
+<header> 
+  <title> 
+  </title>
+  <link rel="stylesheet" type="text/css" href="///users/JohnCain/johnpcain.github.io\unit1_projects\stylesheets\week2_technical_blog.css">
+</header>
+<body>
+  <div class="header">
+    <p> <b>DBC</b> <p>
+  </div>
+  <div class="post">
+  <div class="sub-title">
+    <p> John's thoughts about positioning, among other things.</p>
+  </div>
+  <div class="date">
+    <p> <i>Entry posted Saturday, May 22nd</i></p>
+  </div>
+  <div class="intro">
+    <p> Why, hello. Thanks for visiting my blog! Today we're going to discuss positioning elements on a web page. A web page is made up of a host of different things - pictures, text, boxes, graphs, etc. In coding, we refer to those different things as elements. When we are coding the web page, we use CSS to tell the web page where to place those different elements. We have several ways of telling the web page how to order these elements, which are listed and discussed below. Let's say we have three elements on a page - block 1, block 2, and block 3. Throughout this blog post, i'll be using different types of positioning in CSS to show how we can arrange these different blocks.
+    </p>
+  </div>
+  <div class="body">
+    <h1> Different types of Positioning</h1>
+    <ul>
+      <li><a href="#static">Static</a></li>
+      <li><a href="#Fixed">Fixed</a></li>
+      <li><a href="#Absolute">Absolute</a></li>
+      <li><a href="#Relative">Relative</a></li>
+    </ul>
+    <h2 id="Static">Static</h2>
+      <p> Static positioning is the default positioning that is applied when no positioning is indicated in the css stylesheet. Elements will be ordered sequentially based on the order in which they were coded in html. I've told CSS to treat each block as a block using the code "display:block" because... well because they're blocks. Below, you can see that the default positioning applies by placing the first block in the top left corner of the web page and every subsequent block directly below it. </p>
+      <img class="image" img src="http://i.imgur.com/rl849X2.png" alt"" height="500px" width="700px">
+    <h2 id="Fixed">Fixed</h2>
+      <p>Fixed positioning tells the element "stay where you are on the screen, regardless if the user scrolls to a different part of the web page. Fixed positioning is often helpful for directories that should always be made available to the user. Another interesting little tidbit about fixed positioning is that the other static elements are now default positioned to the web page - you can see that block 2 now occupies that top left spot in the web page. </p>
+      <img class="image" src="http://i.imgur.com/qHYlBJD.png" alt="" height="500px" width="700px">
+    <h2 id="Absolute">Absolute </h2>
+      <p>Abosolute positioning is absolutely positionined relative to the parent element's positioning. If there is no parent element, then the element will be positioned relative to the web page. In our example below, I coded the elements as "siblings", meaning that none of the elemnts have parents. It's sad, I know. </p>
+      <img class="image" src="http://i.imgur.com/qHYlBJD.png" alt="" height="500px" width="700px">
+      <p>As you can see above, the Block 1 element was positioned absolutely, while the other two remained static. Similar to fixed positioning, the next element in line after the absolute element will occupy the top left space on the web page.</p><br>
+      <p>Now below, i've given Blocks 1 & 2 the same absolute positioning, but made Block 1 the proud parent of Block 2. As you can see, Block 1 is positioned relative to the web page, and Block 2 is positioned relative to Block 1. So kewl. <br><br>
+      <img class="image" src="http://i.imgur.com/xzPKjHp.png" alt="" height="500px" width="700px">
+    <h2 id="Relative">Relative</h2>
+      <p>Elements that are positioned using relative tags are positioned relative to the space they would have occupied, had default positioning applied. In the example below, i've given Block 1 relative positioning and left the other two static. Block 1 now is positioned relative to the top left corner, but you'll also notice that Blocks 1 & 2 still default position relative to the space that Block 1 would have occupied. Blocks 1 & 2 are respecting Block 1's territory, so to speak.</p>
+      <img class="image" src="http://i.imgur.com/PIIIkJ4.png" alt="" height="500px" width="700px"> 
+      <p>Now, there is one last point i'd like to illustrate. Whenever one element is given absolute, fixed, or relative positioning, it automatically receives a z-index value. Think of z-index value as street cred. Elements that are not applied any positioning and receive static positioning do not have a z-index value. So, when two elements are fighting for the same space on a web page, the element with the higher street cred occupies the space. Below, i've given Block 1 relative positioning and Block 2 is positioned statically. Check it out </p>
+      <img class="image" src="http://i.imgur.com/O2XMozN.png" alt=""  height="500px" width="700px">
+      <p>NO CONTEST. Block 1 has stepped into Block 2's territory and now completely covers Block 2. Who knew coding could be so violent?</p>
+    </div>
+</body>
+</html>
