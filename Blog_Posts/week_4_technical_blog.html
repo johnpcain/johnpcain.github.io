@@ -1,0 +1,49 @@
+#technical blog post
+<!Doctype html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<link rel=stylesheet href="http://johnpcain.github.io/unit1_projects/stylesheets/blog_template.css">
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+	<title>John Cain</title>
+</head>
+<body>
+	<header><h1>John Cain's Blog</h1></header>
+	<div class="wrapper">
+		<aside>
+			<a href="https://www.facebook.com/cain.johnp?ref=tn_tnmn"> <img class="profile" src="http://i.imgur.com/72qHyxr.jpg?1" alt="" width="200px" height="200px"></a>
+		</aside>
+		<section>
+			<article>
+
+<h1> What is the method "group_by"?</h1>
+	<p> The group_by method falls under the module "enumberator" because it can only be called on a collection of code (think arrays, hashes, etc.). The method, in essence, groups the elements in the collection of code together according to the code that is outlined in the syntax of the method. The syntax of the .group_by method is .group_by {|object| block}, where the object merely names the variable to be used in the block, and the block sets forth the code that is used to group the elements in the collection. </p>
+
+	<p> The group_by method returns a hash as its output, where the keys are all the grouped results from the block of code, and the values are the arrays of elements that correspond to the key. The elements in the collection can be arranged and grouped in any which way, to name a few: element length (4 letter words vs. 5 letter words), element frequency (finding the mode!), or element category ( cats vs. dogs). </p>
+
+<h1> When is this method used? </h1> 
+	<p> This method is very useful when trying to draw conclusions from large groups of data. Say, for instance, an array held the results of a student election, where the students were asked to submit a name for one of four candidates. The group_by method could be called to group the names together, and a .inject method could be called to output the number of votes associated with each candidate. Check it out below:</p>
+
+	<div class = "container">
+	<img src="http://i.imgur.com/JoMRKMb.png">
+	</div>
+	<div class = "container">
+	<img src="http://i.imgur.com/TyTqksz.png">
+	</div>
+
+
+<h1> What just happened?</h1>
+
+<ul>
+	<li> I first created an array that held the results of the student election. I wanted to know who won, so I created a variable called count and set out to collect the final tallies </li>
+	<li> I called the group_by method on my new array of votes and set the object as "c" (for candidate), and used "c" for the block. This told the method that I wanted to name the individual elements in the array as "c", and then that I wanted to group them according to the frequency with which they were listed.</li>
+	<li> I then called the .inject method on that new hash that group_by just created. I injected the value of the hash into an empty curly brackets (see the ({}) in the code). The block that follows the inject method |election (k,v)| first names the new hash that I injected the contents of votes into, and then identifies the key and value with the letter (k,v) to use for running future code. </li>
+	<li> Finally, we use "election [k] = v.size" to change the contents of the new hash. We're telling the new hash to associate every key ( or candidate) with the size of the array, instead of the array itself. So, instead of having "Mary = ["Mary", "Mary", "Mary"], we'll get "Mary = 3". This is more useful to use in determining who won the election. </li>
+</ul>
+
+				</article>
+		</section>
+	</div>
+</body>
+</html>
+

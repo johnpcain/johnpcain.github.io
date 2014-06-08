@@ -61,6 +61,16 @@ article h1{
 	
 }
 
+.container{
+	width: 600px;
+	height: 120px;
+}
 
+.container img{
+	width: 100%;
+	height: auto;
+	border: 0px solid;
+	box-shadow: 0px 0px 4px 1px #666;
+}
 
 
