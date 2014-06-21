@@ -1,0 +1,42 @@
+<!Doctype html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<link rel=stylesheet href="http://johnpcain.github.io/unit1_projects/stylesheets/blog_template.css">
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+	<title>John Cain</title>
+</head>
+<body>
+	<header><h1>John Cain's Blog</h1></header>
+	<div class="wrapper">
+		<aside>
+			<a href="http://johnpcain.github.io"> <img class="profile" src="http://i.imgur.com/72qHyxr.jpg?1" alt="" width="200px" height="200px"></a>
+		</aside>
+		<section>
+			<article>
+				<h1> Blocks, Procs, and Lambdas... and how! </h1>
+				<p> Everything in Ruby is an object, right? Nope! But close. An exception to that generalization are blocks. Blocks are  chunks of code that sit either between "do...end" or {}. Blocks cannot be saved to variables, and as a result, have a limited use. If we were executing code on, say, twenty arrays, and wanted to only use blocks, that means we would have to type out the block for every array we wanted to manipulate. Let's say I wanted to check three arrays and return the strings that had a length of four. Using only blocks, the code would look like this: </p>
+
+				<img src="http://i.imgur.com/1JfiLZc.png" style = "display:block; margin-right:auto; margin-left:auto" width = "300px" alt="">
+
+				<p> Yeah, not fun. That's why we have Procs and Lamdas. Procs and Lambdas are objects that store blocks of code and can be stored in variables and be used to manipulate other objects. Procs and Lambdas allow for more DRY coding (Don't Repeat Yourself). Procs and Lambdas are very similar, and can be called using an "&" before the variable that stores the lambda. See below: <p>
+
+				<img src="http://i.imgur.com/4NvSVNp.png" style = "display: block; margin-right:auto; margin-left:auto" width = "300px" alt="">
+
+				<p> There are two key differences between lambdas and Procs: 
+					<ul>
+						<li> 1. A lambda will check the number of arguments passed to it and alert the user if the wrong number of arguments was used, whereas a Proc will simply assign "nil" to the argument that did receive a value. The latter can cause a code to execute in an unintended fashion. </li>
+						<li> 2. When a Proc returns, it does not go back to the calling method. When a lambda returns, it does go back to the calling method. An easier way for me to think about this one was considering control. A Proc can override control of the method in which it is embedded, but a lambda will cede control to the calling method. Here's an example: </li>
+					</ul>
+
+					<img src="http://i.imgur.com/yMiISns.png" style = "display: block; margin-right:auto; margin-left:auto" width = "300px" alt="">
+
+				</article>
+		</section>
+	</div>
+</body>
+</html>
+
+
+
+
