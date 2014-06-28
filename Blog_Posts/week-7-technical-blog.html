@@ -1,0 +1,91 @@
+<!Doctype html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<link rel=stylesheet href="http://johnpcain.github.io/unit1_projects/stylesheets/blog_template.css">
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+	<title>John Cain</title>
+</head>
+<body>
+	<header><h1>John Cain's Blog</h1></header>
+	<div class="wrapper">
+		<aside>
+			<a href="http://johnpcain.github.io"> <img class="profile" src="http://i.imgur.com/72qHyxr.jpg?1" alt="" width="200px" height="200px"></a>
+		</aside>
+		<section>
+			<article>
+				<h1> Speeding up queries on large databases </h1>
+				<p> Throughout the course of the week, we were forunate to have worked with very, very small databases - containing maybe a couple tables and a few entires. As such, we didn't need to give much thought to optimizing queries, and the "SELECT * FROM users" query was likely used in excess. </p>
+				<p> In the real world, we'll be working with much larger databses that could contain millions of entries. In order to start forming some good habits, let's ditch the "SELECT *" and start abiding by some best practices. First, i'd like to briefly review some simple syntax guidelines: </p>
+					<ul>
+						<li> Generally speaking, it's always best to reference specific columns as opposed to using SELECT * . This will minize row returns and keep the DBMS from needlessly searching columns and rows. </li>
+						<li> All sql verbs should be written in single case (written in all upper or lower case). Most of the challenges we've seen so far seem to consistently write sql verbs as upper case, but in researching sqlite and sql, i've come across many examples that use lower case. </li>
+						<li> All sql verbs should start on a new line </li>
+						<li> Minimize the number of row returns using the LIMIT statement. </li>
+							<blockquote>
+								SELECT name, age FROM users WHERE name = "John"
+							</blockquote>
+							<p> The above code may have returned hundreds of users with a first name John. Let's limit that return list to 10 <p>
+							<blockquote>
+								SELECT name, age FROM users WHERE name = "John" LIMIT 10
+							</blockquote>
+						<li> If a non column expression is being used in the query, it's best not to couple it with a column expression. </li>
+							<p> Instead of: </p>
+								<blockquote>
+									sqlite> SELECT text<br>
+									  ...> FROM tweets<br>
+									  ...> WHERE COUNT(text) - 5 < 10;
+								</blockquote>
+							<p> Use: </p>
+								<blockquote>
+									sqlite> SELECT text<br>
+								   ...> FROM tweets<br>
+								   ...> WHERE COUNT(text) < 5;
+								</blockquote>
+						<li> The wildcard call can be enormously helpful and efficient, if used correctly. The wildcard call " % " can be used three different ways:
+							<ul> 
+								<li> prefix wildcard: '%itten' will return any entry that has text that ends in 'itten'</li>
+								<blockquote>
+									SELECT name FROM pets WHERE name LIKE '%itten';
+								</blockquote>
+								<li> postfix wildcard: 'kitte%' will return any entry that has text that begins with 'kitte' </li>
+								<blockquote>
+									SELECT name FROM pets WHERE name LIKE 'kitte%';
+								</blockquote>
+								<li> full wildcard: '%kitten%' will return any entry that has the word 'kitten' anywhere in the text </li>
+								<blockquote>
+									SELECT name FROM pets WHERE name LIKE '%kitten%';
+								</blockquote>
+							</ul>
+							Generally, it's best to use either prefix or postfix wildcard for optimal efficiency </li>
+					</ul>
+
+				<h1> Syntax changes that require further explanation </h1>
+					<h2> Indexing </h2> 
+						<p> After a table has been created, SQL will allow you to index columns within the table that you can reference with a new index name. This speeds up the query search, as the DBMS will know exactly where to go when referencing data. Generally, columns should only be indexed if they are used frequently within searches. The syntax for indexing a column within a table is as follows: </p>
+							<blockquote>
+								sqlite> CREATE INDEX index_name <br>
+   								...> ON table_name (column_name);<br>
+							</blockquote>
+						<p> Working with the twitter challenge, below I am indexing my column "text" with the name "txt" (always keep the index name short!) </p>
+							<blockquote>
+								sqlite> CREATE INDEX txt<br>
+   								...> ON tweets (text);<br>
+							</blockquote>
+					<h2> Use positive operators over negative operators </h2>
+						<p> Positive operators such as LIKE, EXISTS, IN (which is the slowest of the three) are faster than their negative counterparts - NOT LIKE, NOT IN, != because the negative operators require DBMS to search every single row to ensure that they do not meet the code that is passed in the query. The positive operators are faster because they scan the data and only review entries that meet the code passed in the query. </p>
+
+
+
+
+
+
+				</article>
+		</section>
+	</div>
+</body>
+</html>
+
+
+
+

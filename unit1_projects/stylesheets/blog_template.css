@@ -33,6 +33,16 @@ body{
 	padding: 120px;
 }
 
+blockquote{
+	background-color: #C0C0C0;
+	width: 400px;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 10px 20px 10px 20px;
+	border: 2px solid #C0C0C0;
+	border-radius: 25px;
+	bord
+}
 
 
 section{
